@@ -189,7 +189,136 @@ section:nth-child(2n){
     vertical-align: middle;
 }
 
+/* --- Work Experience Section --- */
+
+.timeline{
+    position: relative;
+    width: 75%;
+    /* border: 2px solid black; */
+    margin-bottom: 5%;
+}
+
+.timeline-box{
+    position: relative;
+    width: 40%;
+    left: 5%;
+    min-height: 150px;
+    margin: 5px;
+    /* border: 2px solid black; */
+}
+
+.timeline-divider{
+    position: absolute;
+    height: 75%;
+    width: 0;
+    border: 1px dashed lightblue;
+    top: 10%;
+    left: 50%;
+}
+
+.timeline-traveller{
+    position: sticky;
+    top: 25%;
+    rotate: 90deg;
+    color: darkblue;
+    z-index: 2;
+}
+
+.timeline-box:nth-child(2n+1)::after{
+    content: '';
+    height: 0.90rem;
+    width: 0.90rem;
+    right: -13.3%;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    background-color: grey;
+    z-index: 1;
+}
+
+.timeline-box:nth-child(2n)::after{
+    content: '';
+    height: 0.90rem;
+    width: 0.90rem;
+    left: -10%;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    background-color: grey;
+    z-index: 1;
+}
+
+.timeline-box:nth-child(2n){
+    left: 53%;
+}
+
+.designation>p{
+    font-family: sans-serif;
+    font-weight: 600;
+    color: rgb(24, 24, 191);
+    font-size: 25px;
+    text-align: end;
+}
+
+.designation>p::before{
+    content: '';
+    position: absolute;
+    background: url(laptop-solid.svg);
+    background-repeat: no-repeat;
+    height: 20%;
+    width: 20%;
+    left: 0%;
+}
+
+.company{
+    font-family: sans-serif;
+    color: rgb(241, 171, 40);
+    font-size: 23px;
+    text-align: end;
+    margin-top: -1.2rem;
+}
+
+.month{
+    font-family: sans-serif;
+    color: grey;
+    font-size: 20px;
+    text-align: end;
+    /* margin-top: rem; */
+}
+
+.job-detail{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: grey;
+    margin-top: 10px;
+    text-align:start;
+}
+
+/* --- Education --- */
+
+.degree>p{
+    font-family: sans-serif;
+    font-weight: 600;
+    color: rgb(24, 24, 191);
+    font-size: 25px;
+    text-align: end;
+}
+
+.degree>p::before{
+    content: '';
+    position: absolute;
+    background: url(school-circle-check-solid.svg);
+    background-repeat: no-repeat;
+    height: 20%;
+    width: 20%;
+    left: 0%;
+}
+
 /* --- Styling--- */
+
+.mb50px {
+    margin-bottom: 50px;
+}
 
 .mb75px{
     margin-bottom: 75px;
@@ -239,7 +368,7 @@ section:nth-child(2n){
 }
 
 .portfolio-image-container{
-    max-width: 300px;
+    max-width: 340px;
     overflow: hidden;
     margin: 10px;
     background-size: cover;
@@ -270,4 +399,99 @@ section:nth-child(2n){
 .portfolio-image-container:hover .portfolio-details {
     background-color: #80808078;
     color: white;
+}
+
+/* --- contact section --- */
+
+#contact{
+    background-color: #0abcf9;
+    background: linear-gradient(90deg, #2857a4, #403066);
+    color: white;
+    padding-bottom: 40px;
+}
+
+#contact h1, #contact h1 span{
+    color: white;
+}
+
+#contact-container{
+    display: flex;
+}
+
+#contact-form-container{
+    width: 50%;
+}
+
+#contact-form{
+    margin-left: 20%;
+}
+
+#my-details-container{
+    margin-left: 6%;
+    width: 35%;
+}
+
+#my-details-container h3{
+    color: white;
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+
+#my-details-container p{
+    color: #d9dcdd;
+    font-size: 0.9rem;
+}
+
+#my-details-info-container{
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #d9dcdd;
+}
+
+#my-details-info-container span{
+    margin: 0.4rem;
+}
+
+#my-details-info-container i{
+    color: white;
+}
+
+#contact-form input,textarea{
+    width: 90%;
+    max-width: 90%;
+    margin: 15px;
+    padding: 4px 10px;
+    border: 0px solid transparent;
+    border-bottom: 2px solid white;
+    color: #d9dcdd;
+    background: transparent;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+
+#contact form button[type="submit"]{
+    background: transparent;
+    font-size: 0.95rem;
+    font-family: sans-serif;
+    color: white;
+    border: 2px solid white;
+    margin-left: 40%;
+    padding: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1;
+}
+
+#contact-form button:hover{
+    color: #13386fe0;
+    background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+button:focus{
+    outline: none;
 }
